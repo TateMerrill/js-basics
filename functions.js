@@ -24,9 +24,9 @@ console.log(answer)
 
 function greaterThanFive(number) {
 if ( number > 5){
-  return "True"
+  return true
 } else {
-  return "False"
+  return false
 }
 }
 
@@ -42,15 +42,15 @@ console.log(number)
 
 //CODE HERE
 function findZWords(word) {
-  if (word === "Zelda") {
+  if (word[0].toLowerCase() ==="z"){
   return "the name begins with Z"
   } else { 
   return "the name does not begin with Z"
 }
 }
 
-let nameChecker = findZWords('Zelda')
-console.log(nameChecker)
+
+console.log(findZWords('Zelda'))
 //////////////////PROBLEM 4////////////////////
 /*
   Create a function called 'iLove' that takes in two string parameters, 'name' and 'love'. 
@@ -61,6 +61,6 @@ console.log(nameChecker)
 //CODE HERE
 
 function iLove(names, love ){
-    names = "Tate";
-    love = "music";
-} return iLove(`${names} + "loves" + ${love}`)
+  return iLove(`${names} + "loves" + ${love}`)
+} 
+console.log(iLove('Tate', 'Music'))

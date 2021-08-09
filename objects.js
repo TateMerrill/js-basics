@@ -15,14 +15,21 @@
 */
 
 //CODE HERE
-const me = {
-  firstName: "Tate",
-  state: "Utah",
+let me = {
+  firstName: 'Tate',
+  state: 'Utah',
   age: 22,
-  greeter: `Hello! my name ${firstName} and I live in ${state}`
-};
+  greeter: function(){
+    console.log(`Hello! My name is ${this.firstName} and I live in ${this.state}`);
+  }
+}
+  
 
-console.log(me.greeter)
+
+  
+
+
+
 
 
 //////////////////PROBLEM 2////////////////////
@@ -50,6 +57,17 @@ console.log(me.greeter)
 */
 
 //CODE HERE
-function carFactory(make, model, year) {
-  
+let carFactory = function(make, model, year){
+  this.make = make;
+  this.model = model;
+  this.year = year;
+
+  if(this.year > 2018){
+    this.isNew = true;
+  } else {
+    this.isNew = false;
+  }
 }
+
+let myCar = new carFactory('toyota', 'camry', 2020)
+console.log(myCar)
